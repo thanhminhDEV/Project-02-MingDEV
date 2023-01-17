@@ -6,14 +6,19 @@ html {
     font-size: 62.5%;
 }
 
+:root {
+    --btn-color: #171100;
+}
+
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
 }
+
 /* Common */
-.content {
+.main-content {
     width: 1170px;
-    max-width: 100%;
+    max-width: calc(100% - 24px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -23,141 +28,162 @@ a {
 }
 
 .btn {
-    padding: 18px 16px;
-    width: 118px;
-    min-width: 118px;
-    background: #171100;
-    border-radius: 25px;
+    padding: 17px 16px;
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-align: center;
     color: #ffffff;
+    background: var(--btn-color);
+    border-radius: 999px;
+    width: 118px;
 }
-
 /* header */
 .header {
-    background-color: #fffcf4;
-    height: 100vh;
+    background: #fffcf4;
 }
 
-.navbar {
+.nav {
     padding-top: 36px;
+    padding-bottom: 6px;
+    display: flex;
     align-items: center;
-    display: flex;
 }
 
-.navbar .nav ul {
-    display: flex;
+.anchor {
+    z-index: 1;
+    position: sticky;
+    top: -28px;
+    background: #fffcf4;
 }
 
-.navbar .nav {
+.nav .list {
     margin-left: auto;
 }
 
-.navbar .nav a {
-    padding: 8px 21px;
+.nav .list ul {
+    display: flex;
+}
+
+.nav .list a {
     font-weight: 400;
     font-size: 1.6rem;
     text-align: center;
     color: #5f5b53;
+    padding: 8px 21px;
 }
-
-.navbar .nav a:hover {
+.nav .list a:hover,
+.nav .bold a {
+    position: relative;
     text-shadow: 1px 0 0 currentColor;
     color: #171100;
 }
 
-.nav li.home a {
-    position: relative;
-    font-weight: 600;
-    color: #171100;
-}
-
-.nav li.home a::after {
-    display: block;
+.nav .bold a::after {
     position: absolute;
-    content: "";
-    left: 21px;
+    display: block;
     bottom: 6px;
-    display: inline-block;
+    left: 21px;
+    content: "";
     width: 12px;
     height: 2px;
     background: #171100;
     border-radius: 1px;
 }
 
-.navbar .nav a:first-child {
-    margin-left: none;
-}
-
-.navbar .actions-btn {
-    margin-left: 70px;
+.nav .btn {
+    margin-left: 49px;
     width: 144px;
+    border-radius: 24.5px;
+}
+/* hero */
+.hero {
+    display: flex;
+    background: #fffcf4;
+    padding-top: 56px;
 }
 
-.hero {
+.hero .main-content {
+    position: relative;
     display: flex;
 }
 
-.hero .image {
-    margin-top: 65px;
+.hero-img .img {
     width: 470px;
     height: 685px;
     object-fit: cover;
     border-radius: 20px;
 }
 
-.hero .hero-img {
+/* hero left */
+.hero-img {
     position: relative;
+    width: 48%;
 }
 
-.hero .hero-img .sub-title {
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 1.67;
-    color: #171100;
-}
-
-.hero-img .info {
-    left: 300px;
+.hero .info {
     bottom: 48px;
-    position: absolute;
-    height: 244px;
-    width: 270px;
-    display: flex;
+    left: 300px;
+    padding: 28px 24px 28px 24px;
     background: #ffffff;
-    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    width: 270px;
+    position: absolute;
     border-radius: 12px;
 }
 
-.hero .info-logo {
-    margin-left: 24px;
-    margin-top: 6px;
+.hero .item {
     display: flex;
-    flex-direction: column;
 }
 
-.hero .logo {
-    margin-top: 22px;
-}
-
-.hero .info-font {
+.hero-info {
     margin-left: 16px;
-    margin-top: 10px;
 }
 
-.hero .Notification {
-    width: 41%;
-    margin-top: 129px;
-    margin-left: 230px;
+.hero-info .desc {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #5f5b53;
 }
 
-.Notification .sub-title {
+.hero-info .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #171100;
+}
+
+.info .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #fff9e8;
+    border-radius: 50%;
+}
+
+.info .item {
     margin-top: 22px;
 }
 
-.hero .title {
+.info .item:first-child {
+    margin-top: none;
+}
+
+.info .item:nth-of-type(2) .icon {
+    background: #fcefff;
+}
+
+.info .item:nth-of-type(3) .icon {
+    background: #ebeaff;
+}
+/* hero right */
+.hero-content {
+    padding: 64px 0 0 130px;
+    width: 52%;
+}
+
+.hero-content .title {
     font-family: "Sen";
+    font-style: normal;
     font-weight: 700;
     font-size: 5.8rem;
     line-height: 1.17;
@@ -165,64 +191,67 @@ a {
     color: #171100;
 }
 
-.hero .easc {
-    margin-top: 14px;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 1.86;
-    color: #5f5b53;
-}
-.hero .sub-title {
-    
+.hero-content .desc {
+    margin-top: 22px;
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 1.67;
     color: #5f5b53;
 }
 
-.Notification .func {
+.btn-hero {
+    margin: 38px 0 48px 0;
     align-items: center;
-    margin-top: 38px;
     display: flex;
 }
 
-.Notification .btn {
-    font-size: 1.8rem;
-    line-height: 1.67;
-    text-align: center;
-    padding: 17px 16px;
-    color: #ffffff;
+.btn-hero .btn {
+    min-width: 180px;
+    padding: 24px 16px;
+    display: block;
     width: 180px;
     background: #ffb900;
-    border-radius: 32px;
 }
 
-.Notification .video {
-    margin-left: 41px;
+.btn-hero .button {
+    margin-left: 28px;
+    border: none;
+    background: #fffcf4;
+    display: flex;
+    align-items: center;
+}
+
+.btn-hero .play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     background: #ffffff;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
 }
 
-.Notification .func .sub-title {
-    margin-top: 22px;
-    margin-left: 28px;
+.btn-hero .watch-video {
+    margin-left: 14px;
     font-weight: 600;
     font-size: 1.8rem;
     color: #171100;
 }
 
-.Notification .sta {
-    margin-top: 21px;
+.hero-content .content {
+    margin-top: -32px;
     display: flex;
 }
 
-.Notification .flo {
-    margin-top: 48px;
-    font-weight: 400;
-    font-size: 1.8rem;
-    color: #5f5b53;
+.hero-content .content strong {
+    margin-right: 14px;
+    font-family: "Sen" sans-serif;
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: #171100;
 }
 
-.Notification .img-students {
-    margin-right: 28px;
+.hero-content .content .desc + .desc {
+    margin-left: 22px;
 }
