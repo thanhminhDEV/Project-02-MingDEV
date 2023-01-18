@@ -99,7 +99,7 @@ a {
 .hero {
     display: flex;
     background: #fffcf4;
-    padding-top: 56px;
+    padding: 56px 0 65px 0;
 }
 
 .hero .main-content {
@@ -123,7 +123,7 @@ a {
 .hero .info {
     bottom: 48px;
     left: 300px;
-    padding: 28px 24px 28px 24px;
+    padding: 24px;
     background: #ffffff;
     width: 270px;
     position: absolute;
@@ -254,4 +254,154 @@ a {
 
 .hero-content .content .desc + .desc {
     margin-left: 22px;
+}
+/* popular */
+.popular {
+    margin-top: 200px;
+}
+
+.introduce {
+    display: flex;
+    align-items: center;
+}
+
+.introduce .content-intro {
+    width: 39%;
+}
+
+.introduce .content-intro .sub-title {
+    font-family: "Sen" sans-serif;
+    font-weight: 700;
+    font-size: 3.8rem;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.introduce .content-intro .desc {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #5f5b53;
+}
+
+.introduce .logo-intro {
+    display: flex;
+    margin-left: auto;
+}
+
+.introduce .logo-intro .img-yellow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffb900;
+    border-radius: 50%;
+}
+
+.introduce .logo-intro .img-white {
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #ffb900;
+    border-radius: 50%;
+}
+
+/* buy-courses */
+
+.courses {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+.courses .image {
+    width: 370px;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.buy-courses {
+    width: 31.7%;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.content-courses {
+    width: 326px;
+    margin: 16px 22px 22px 22px;
+}
+
+.content-courses .title {
+    display: flex;
+    /* align-items: center; */
+}
+
+.content-courses .sub-title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #171100;
+}
+
+.content-courses .evaluat {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.content-courses .value-star {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #fea31b;
+    margin-left: 6px;
+}
+
+.content-courses .desc {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
+.buy-dolar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-dolar .icon {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #171100;
+    display: flex;
+    align-items: center;
+}
+
+.buy-dolar .icon-dolar {
+    height: 16px;
+    width: 9px;
+}
+
+.buy-dolar .btn-courses {
+    margin: 12px 0 22px 0;
+    background: #ffb900;
+    padding: 18px 16px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.buy-dolar .btn-courses-black {
+    margin-top: 12px;
+    padding: 18px 16px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ffffff;
 }
