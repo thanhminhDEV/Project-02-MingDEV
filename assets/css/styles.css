@@ -145,6 +145,7 @@ a {
 }
 
 .hero-info .title {
+    margin-top: 10px;
     font-weight: 600;
     font-size: 1.8rem;
     color: #171100;
@@ -650,7 +651,7 @@ a {
     display: flex;
     margin-top: 38px;
     padding-bottom: 96px;
-    justify-content: center
+    justify-content: center;
 }
 
 .dot-total .dot {
@@ -666,4 +667,90 @@ a {
 
 .dot-total .dot-yellow {
     background: #ffb900;
+}
+
+/* contact */
+.contact {
+    background: #2e2100;
+}
+
+.content-contact .info {
+    display: flex;
+    padding-top: 96px;
+}
+
+.contact .info {
+    justify-content: space-between;
+}
+
+.network {
+    width: 22%;
+}
+
+.content-contact .network .desc {
+    margin-top: 18px;
+    line-height: 1.86;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #bfbcb2;
+}
+
+.network .network-logo {
+    padding-bottom: 86px;
+    margin-right: 18px;
+    margin-top: 18px;
+}
+
+.network .network-logo .logo {
+    margin-right: 18px;
+}
+
+.contact .sup {
+    width: 20%;
+}
+
+.contact .sup .sub-title {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.contact .sup .hori {
+    margin-top: 14px;
+    width: 130px;
+    height: 1px;
+    background: #59554b;
+}
+
+.contact .sup .desc {
+    margin-top: 12px;
+    line-height: 1.86;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #bfbcb2;
+}
+
+.contact .sup .desc-1 {
+    margin-top: 28px;
+}
+
+.content-contact .hori {
+    width: 1170px;
+    height: 1px;
+    background: #59554b;
+}
+
+.content-contact .desc-copy {
+    margin-top: 28px;
+    padding-bottom: 28px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #807d74;
+}
+
+.contact .sup .bold {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #ffffff;
 }
